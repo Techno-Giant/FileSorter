@@ -1,0 +1,4 @@
+["Audio Extensions", ".amr", ".mp3", ".hgp"]
+["Documents Extensions", ".doc", ".xlsx", ".ppt", ".pptx", ".xls", ".pdf", ".zip", ".rar", ".csv", ".docx", ".java", ".txt"]
+["Image Extensions", ".png", ".jpg"]
+["Video Extensions", ".mp4", ".avi", ".mpeg4", ".3gp"]

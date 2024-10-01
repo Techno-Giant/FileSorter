@@ -1,0 +1,1 @@
+["Documents Extensions", ".doc", ".xlsx", ".ppt", ".pptx", ".xls", ".pdf", ".zip", ".rar", ".csv", ".docx", ".java", ".txt"]

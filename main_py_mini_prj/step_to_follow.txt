@@ -1,0 +1,63 @@
+The File Sorting Application is a software program built using Python and the Tkinter library for the graphical user interface. The main objective of this application is to 
+provide users with an efficient and user-friendly method of sorting files on their computer system. The program allows users to sort files based on specific file extensions
+ such as audio files, video files, and image files.
+
+
+Steps to follow TO START:
+(1) All the extension files are stored in 'extension_files' folder and icons and images in 'prj_pics' folder 
+(3) PLEASE provide ABSOLUTE PATH for each.
+(2) All the extension are stored in indivial files eg: extension related to images in image.txt.
+(3)similarly follow for project images in 'prj_pics'
+
+
+(4)provide the path for foloowing variables lacated between lines 6-22
+
+IN extension_files folder:
+
+	path_imagefile = r""
+	path_audiofile = r""				
+	path_videofile = r"" 	
+	path_docfile = r""	
+
+IN  prj_pics folder:
+	path_iconimage = r""
+	path_logo_icon = r""
+	path_image_icon = r""
+	path_audio_icon = r""
+	path_video_icon = r""
+	path_document_icon = r""
+	path_other_icon =r""
+
+
+
+
+
+
+====================================================================== SHORT insight ABOUT WORKING ===================================================================================
+steps how it works:
+ (1) All the extension are stored in text file but in JSON FORMAT i.e when retrieving user don't have to add split function to convert 'string datatype' to 'list datatype' in python
+
+ (2) When project is runned it calls all the function(defined for reading extension)  to read it and ASSIGN it to  particular variable
+ (3) After browsing a folder a total_count(),rename_ folder() is use to count no. files based on extension and all rename folders in lowercase
+ (4) And accordingly some functions are designed to add extension and delete_extension are designed 
+ (5) While adding first select the desired radio button and the fill the entry box WITHOUT '.(DOT)' because '.(DOT)' is added in background, the changes will be first reflected in 
+	 list, then it will changed in PARTICULAR extension file along with combobox
+ (6) For deleting a particular extension click on "Delete Ext", click on desired radio button it display the current extension types in listbox .Select the particular extension
+ datatype
+	 and press "Delete" .The changes will be reflected in list and similar procedure will followed as discussed while adding
+ (7)Something due to manually opening and making changes in extension_files user bymistakenly forgets to ',' so the list becomes empty and pop up message will appear it is so.
+	You can refer the 'all_extension.txt' file in which all tthe extensin added.
+	
+IMPORTED os, shutil, json 
+
+(1)os,shutil modules are use to access,move,it exists or not files by interacting with operating system AND JSON . All this modules are in_built
+(2)main function imported from os is os.walk() function to traverse the folder/directry.three variable are used along with it 
+		(a)root_path ---> gives current path
+		(b)sub_path ----> lists of folder present within current folder
+		(c)files --------> gives the list of files present in current folder(root_path)
+(3)shutil is used for moving files through function 'shutil.move()' which takes file_name and folder_name as arguments
+(4)json modules loads() and dumps() function 
+		(a)json.loads() ---------> takes JSON formatted string as arguments and returns python objects(here list)
+		(b)json.dumps() ---------> takes python objects(here list) as arguments and returns JSON formatted string
+
+====================================================================================================================================================================================

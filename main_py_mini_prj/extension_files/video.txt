@@ -1,0 +1,1 @@
+["Video Extensions", ".mp4", ".avi", ".mpeg4", ".3gp"]
