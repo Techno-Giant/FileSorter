@@ -266,32 +266,7 @@ class Sorting_App:
         a=self.var_radio_Fr3.get()
         self.lst_box_list=list(self.lst_box.get(0,END))
         # print(self.lst_box_list)
-        if a == 1:
-            self.path=path_imagefile
-            self.image_extensions = self.lst_box_list
-            self.update_extfile(self.path,self.image_extensions)
-            self.image_box.config(values = self.image_extensions)
-            messagebox.showinfo("Success",self.deleted_element+"Deleted from image extension")
-        elif a == 2:
-            self.path=path_audiofile
-            self.audio_extensions = self.lst_box_list
-            self.update_extfile(self.path,self.audio_extensions)
-            self.audio_box.config(values = self.audio_extensions)
-            messagebox.showinfo("Success",self.deleted_element+"Deleted from audio extension")
-        elif a == 3:
-            self.path=path_videofile
-            self.video_extensions = self.lst_box_list
-            self.update_extfile(self.path,self.video_extensions)
-            self.video_box.config(values = self.video_extensions)
-            messagebox.showinfo("Success",self.deleted_element+"Deleted from video extension")
-        elif a == 4:
-            self.path=path_docfile
-            self.doc_extensions = self.lst_box_list
-            self.update_extfile(self.path,self.doc_extensions)
-            self.doc_box.config(values = self.doc_extensions)
-            messagebox.showinfo("Success",self.deleted_element+"Deleted from document extension")
-
-
+        
 
         
         #===============================================================================================================================================================  
