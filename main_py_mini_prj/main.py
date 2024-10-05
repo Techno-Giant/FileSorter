@@ -237,8 +237,18 @@ class Sorting_App:
 
 
         self.Fr3_btn_del = Button(self.Frame3, text="Delete",command=self.del_ele, font = ("times new roman", 15, "bold"), bg = "#262626", fg = "white", activebackground = "#262626", cursor = "hand2", activeforeground = "white")
+
         self.Fr3_btn_del.place(x = 160, y = 220, height =  45, width = 150)
-    
+        # Function to retrieve the user selected element from list box to be deleted and update it in corresponding extension list and text file(JSON format)
+        def del_ele(self):
+            if not self.lst_box.curselection():
+                messagebox.showerror("Error","Please select an extension to be deleted from Listbox !!!")
+            self.deleted_element = self.lst_box.get(self.lst_box.curselection())
+            self.lst_box.delete(ANCHOR) 
+            a=self.var_radio_Fr3.get()
+            self.lst_box_list=list(self.lst_box.get(0,END))
+            # print(self.lst_box_list)
+        
     # Function to display the selected extension's content in list box
     def display_list(self):
         a=self.var_radio_Fr3.get()
@@ -257,15 +267,7 @@ class Sorting_App:
                 self.lst_box.insert(END, item)
     
 
-    # Function to retrieve the user selected element from list box to be deleted and update it in corresponding extension list and text file(JSON format)
-    def del_ele(self):
-        if not self.lst_box.curselection():
-            messagebox.showerror("Error","Please select an extension to be deleted from Listbox !!!")
-        self.deleted_element = self.lst_box.get(self.lst_box.curselection())
-        self.lst_box.delete(ANCHOR) 
-        a=self.var_radio_Fr3.get()
-        self.lst_box_list=list(self.lst_box.get(0,END))
-        # print(self.lst_box_list)
+    
         
 
         
